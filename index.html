@@ -9,7 +9,8 @@
 <body>
     <div class="video-background">
         <div class="video-foreground">
-            <iframe src="https://www.youtube.com/embed/TRP5El5UOz0?autoplay=1&mute=1&controls=0&loop=1&playlist=TRP5El5UOz0&showinfo=0&rel=0"
+            <iframe id="video-player"
+                src="" 
                 frameborder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
@@ -18,7 +19,31 @@
     </div>
     
     <div class="content">
-        <h1>A&D</h1>
+        <img src="logo.png" alt="A&D Logo" class="main-logo">
     </div>
-</body>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Define your video URLs in an array. 
+            // Note: The 'playlist' parameter must match the video ID for continuous looping.
+            const videoUrls = [
+                // Video A: TRP5El5UOz0
+                "https://www.youtube.com/embed/TRP5El5UOz0?autoplay=1&mute=1&controls=0&loop=1&playlist=TRP5El5UOz0&showinfo=0&rel=0", 
+                
+                // Video B: jxE7d8OUHdI (Your new video)
+                "https://www.youtube.com/embed/jxE7d8OUHdI?autoplay=1&mute=1&controls=0&loop=1&playlist=jxE7d8OUHdI&showinfo=0&rel=0" 
+            ];
+
+            // Select a random index (0 or 1)
+            const randomIndex = Math.floor(Math.random() * videoUrls.length);
+
+            // Get the randomly selected URL
+            const randomVideoUrl = videoUrls[randomIndex];
+
+            // Set the iframe's src attribute to load the random video
+            const videoPlayer = document.getElementById('video-player');
+            videoPlayer.src = randomVideoUrl;
+        });
+    </script>
+    </body>
 </html>
