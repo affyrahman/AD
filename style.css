@@ -74,11 +74,11 @@ html, body {
     background: rgba(0, 0, 0, 0.4); 
 }
 
-/* UPDATED: Logo Image Styling */
+/* FINAL LOGO SIZE: 80% smaller than the last step (40vw -> 8vw) */
 .main-logo {
-    /* Made these values 50% smaller than before */
-    max-width: 40vw;  /* Logo won't exceed 40% of the viewport width */
-    max-height: 40vh; /* Logo won't exceed 40% of the viewport height */
+    /* Logo won't exceed 8% of the viewport width/height */
+    max-width: 8vw;  
+    max-height: 8vh; 
     width: auto;
     height: auto;
     display: block;
