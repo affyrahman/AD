@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A&D</title>
+    <title>A&D Landing Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,26 +24,20 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Define your video URLs in an array. 
-            // Note: The 'playlist' parameter must match the video ID for continuous looping.
+            // Video URLs array for random selection
             const videoUrls = [
-                // Video A: TRP5El5UOz0
-                "https://www.youtube.com/embed/TRP5El5UOz0?autoplay=1&mute=1&controls=0&loop=1&playlist=TRP5El5UOz0&showinfo=0&rel=0", 
-                
-                // Video B: jxE7d8OUHdI (Your new video)
+                // Video B (Currently the only video)
                 "https://www.youtube.com/embed/jxE7d8OUHdI?autoplay=1&mute=1&controls=0&loop=1&playlist=jxE7d8OUHdI&showinfo=0&rel=0" 
             ];
 
-            // Select a random index (0 or 1)
+            // Select a random video URL
             const randomIndex = Math.floor(Math.random() * videoUrls.length);
-
-            // Get the randomly selected URL
             const randomVideoUrl = videoUrls[randomIndex];
 
-            // Set the iframe's src attribute to load the random video
+            // Apply the URL to the video player
             const videoPlayer = document.getElementById('video-player');
             videoPlayer.src = randomVideoUrl;
         });
     </script>
-    </body>
+</body>
 </html>
